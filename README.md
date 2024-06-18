@@ -1,3 +1,13 @@
+```
+✅ TODOS
+- Incidente: El professor vulnera una maquina al principio de la clase (SQL Injection)
+- Los alumnos tienen que encontrar las vulnerabilidades, y reportarlas.
+- Se peude tener una maquina UNICA en la nube para usarla y que los alumnos accedan.
+- OWASP Top 10
+- SqlMap
+```
+
+
 ### Project Title: ISO 27001 Compliant Incident Management Simulation with Kali Linux
 
 ### Objective:
