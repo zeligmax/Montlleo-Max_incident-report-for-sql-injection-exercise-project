@@ -9,3 +9,7 @@
 
 
 
+Recursos:
+
+- DVWA Running: http://124.71.1.37/DVWA/
+- Ejemplo de reporte de incidente (demsiado formal para neustro gusto): https://cybereaon.com/wp-content/uploads/2021/05/sample_report_web.pdf
