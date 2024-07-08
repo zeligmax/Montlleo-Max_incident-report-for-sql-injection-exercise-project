@@ -6,7 +6,7 @@
 [![build by developers](https://img.shields.io/badge/build_by-Developers-blue)](https://4geeks.com)
 [![build by developers](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter)](https://twitter.com/4geeksacademy)
 
-*Estas instrucciones están [disponibles en español](https://github.com/breatheco-de/installing-kali-linux-on-virtual-machine/blob/main/README.md)*
+*Estas instrucciones están [disponibles en español](https://github.com/breatheco-de/incident-report-management-exercise-project/blob/main/README.es.md)*
 <!-- endhide -->
 
 <!-- hide -->
