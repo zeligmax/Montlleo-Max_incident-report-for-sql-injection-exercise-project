@@ -25,68 +25,34 @@ This exercise aims to teach students how to identify and report an SQL injection
 
 ### Requirements
 
-* VirtualBox installed on your computer.
-* A Debian virtual machine installed in VirtualBox. For the purposes of this tutorial, we will use Debian.
+- VirtualBox installed on your computer.
+- A Debian virtual machine installed in VirtualBox. (We will use the machine previously configured in earlier classes).
 
 #### Benefits of Using a Virtual Machine
 
-* Isolation: Keeps the testing environment separate from your main operating system, protecting it from potential damage.
-
-* Easy Restoration: You can create snapshots of your virtual machine and restore them easily if something goes wrong.
-
-* Portability: You can move and share the virtual machine easily with others.
+- **Isolation:** Keeps the testing environment separate from your main operating system, protecting it from potential damage.
+- **Ease of Restoration:** You can create snapshots of your virtual machine and easily restore them if something goes wrong.
+- **Portability:** You can easily move and share the virtual machine with others.
 
 ## 📝 Instructions
 
-### Step 1: Create a Virtual Machine.
-- [ ] Open VirtualBox and click "New".
-- [ ] Name your VM (e.g., "Debian-DVWA").
-- [ ] Select "Linux" as the type and "Debian (64-bit)" as the version.
-- [ ] Assign at least 2 GB of RAM (recommended).
-- [ ] Create a virtual hard disk with at least 20 GB of space (VDI, dynamically allocated).
-- [ ] Download the Debian ISO image from the Debian website.
-- [ ] Start the VM and select the downloaded Debian ISO to boot from it.
-- [ ] Follow the on-screen instructions to install Debian on the virtual machine.
-- [ ] In the "Network" section, select "Bridged Adapter" so that the VM is on the same network as your host.
+### Step 1: Verify the Virtual Machine Setup Before Starting
 
-### Step 2: Set Up the Development Environment: MySQL (MariaDB), Apache, and PHP (LAMP Stack).
-- [ ] Update the package index
-```sh
-sudo apt-get update
-```
-- [ ] Install MariaDB
-```sh
-sudo apt-get install mariadb-server
-```
-- [ ] Start and enable the MariaDB service
-```sh
-sudo systemctl start mariadb 
-sudo systemctl enable mariadb
-```
-- [ ] Secure the MariaDB installation
-```sh
-sudo mysql_secure_installation
-```
-- [ ] Follow the prompts to set the root password for MariaDB and configure basic security.
+- [ ] In the "Network" section, select "Bridge Adapter" so the VM is on the same network as your host.
+- [ ] Verify the correct installation of MySQL (MariaDB), Apache, and PHP (LAMP Stack).
+- [ ] Set the root password for MariaDB and configure the basic security.
 
+### Step 2: Installing and Configuring DVWA
 
-### Step 3: Configure Apache and PHP.
-- [ ] Install Apache and PHP
-```sh
-sudo apt-get install apache2 
-sudo apt-get install php libapache2-mod-php php-mysql
-```
-- [ ] Start and enable the Apache service
-```sh
-sudo systemctl start apache2 
-sudo systemctl enable apache2
-```
+- [ ] Download DVWA from the provided link:
+    ```sh
+    cd /var/www/html
+    sudo apt-get install wget unzip
+    sudo wget https://storage.googleapis.com/breathecode/virtualbox/DVWA.zip
+    sudo unzip DVWA.zip
+    sudo mv DVWA-master DVWA
+    ```
 
-### Step 4: Install and Configure DVWA.
-- [ ] Download DVWA
-```sh
-cd /var/www/html 
-```
 - [ ] Configure DVWA
 Change to the DVWA directory and rename the configuration file
 ```sh
@@ -99,7 +65,7 @@ sudo nano config.inc.php
 ```
 > 💡 IMPORTANT: Ensure the following lines have the correct credentials:
 * $_DVWA[ 'db_user' ] = 'root';
-* $_DVWA[ 'db_password' ] = 'tu_contraseña_de_root'; 
+* $_DVWA[ 'db_password' ] = 'root_password'; 
 * $_DVWA[ 'db_database' ] = 'dvwa';
 
 - [ ] Configure the Database
@@ -118,7 +84,7 @@ sudo chmod -R 755 /var/www/html/DVWA/
 - [ ] Review the setup and click "Create / Reset Database".
 
 
-### Step 5: Conduct the SQL Injection Attack.
+### Step 3: Conduct the SQL Injection Attack.
 - [ ] Open a browser in the VM and go to http://localhost/DVWA.
 - [ ] Log in to DVWA:
 ```
@@ -137,7 +103,10 @@ Enter a simple SQL injection attack in the provided "User ID" field, for example
 Click "Submit" and observe how DVWA processes the injection and displays the database results.
 > 💡 NOTE: You should see a list of all users extracted from the database, indicating a successful SQL injection.
 
-### Step 6: Incident Report.
+![vulnerability](assets/vulnerability.png)
+
+
+### Step 4: Incident Report.
 
 - [ ] Follow the Report Structure
   * Report Title
@@ -148,4 +117,6 @@ Click "Submit" and observe how DVWA processes the injection and displays the dat
   * Recommendations
   * Conclusion
 
- Good luck with your exercise!
+> 💡 NOTE: Incident reports according to ISO 27001 standards do not specifically require the inclusion of images unless they are necessary to illustrate critical points or specific technical details of the incident. However, in most cases, reports often include screenshots, charts, or diagrams only if they are relevant to support the explanation of the incident or to demonstrate how the vulnerability exploitation was carried out.
+
+[Download an example of an incident report](assets/incident_ISO27001_report.pdf)

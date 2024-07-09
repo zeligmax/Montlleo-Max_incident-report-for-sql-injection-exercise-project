@@ -28,66 +28,35 @@ Este ejercicio tiene como objetivo enseñar a los estudiantes cómo identificar 
 ### Requisitos
 
 * VirtualBox instalado en tu computadora.
-* Una máquina virtual Debian instalada en VirtualBox. Para efectos del tutorial, utilizaremos Debian.
+* Una máquina virtual Debian instalada en VirtualBox. (usaremos la máquina previamente configurada en clases anteriores).
+
 
 #### Beneficios de Usar una Máquina Virtual
 
-*Aislamiento: Mantiene el entorno de pruebas separado de tu sistema operativo principal, protegiéndolo de posibles daños.
+- **Aislamiento:** Mantiene el entorno de pruebas separado de tu sistema operativo principal, protegiéndolo de posibles daños.
 
-*Facilidad de Restauración: Puedes crear instantáneas (snapshots) de tu máquina virtual y restaurarlas fácilmente si algo sale mal.
+- **Facilidad de Restauración:** Puedes crear instantáneas (snapshots) de tu máquina virtual y restaurarlas fácilmente si algo sale mal.
 
-*Portabilidad: Puedes mover y compartir la máquina virtual fácilmente con otros.
+- **Portabilidad:** Puedes mover y compartir la máquina virtual fácilmente con otros.
 
 ## 📝 Instrucciones
 
-### Paso 1: Crear una Máquina Virtual:
-- [ ] Abre VirtualBox y haz clic en "Nuevo".
-- [ ] Asigna un nombre a tu VM (por ejemplo, "Debian-DVWA").
-- [ ] Selecciona "Linux" como tipo de sistema operativo y "Debian (64-bit)" como versión.
-- [ ] Asigna al menos 2 GB de RAM (recomendado).
-- [ ] Crear un disco duro virtual con al menos 20 GB de espacio (VDI, reservado dinámicamente).
-- [ ] Descarga la imagen ISO de Debian desde Debian.
-- [ ] Inicia la VM y selecciona la imagen ISO de Debian descargada para arrancar desde ella.
-- [ ] Sigue las instrucciones en pantalla para instalar Debian en la máquina virtual.
+### Paso 1: Verificar la configuración de la máquina virtual antes de iniciar:
 - [ ] En la sección "Red", selecciona "Adaptador Puente" (Bridge Adapter) para que la VM esté en la misma red que tu host.
 
-### Paso 2: Configuración de Entorno de Desarrollo.  MySQL(MariaDB) Apache, y PHP (LAMP Stack):
-- [ ] Actualizar el índice de paquetes
-```sh
-sudo apt-get update
-```
-- [ ] Instalar MariaDB
-```sh
-sudo apt-get install mariadb-server
-```
-- [ ] Iniciar y habilitar el servicio de MariaDB
-```sh
-sudo systemctl start mariadb 
-sudo systemctl enable mariadb
-```
-- [ ] Asegurar la instalación de MariaDB
-```sh
-sudo mysql_secure_installation
-```
-- [ ] Sigue las instrucciones para establecer la contraseña del root de MariaDB y configurar la seguridad básica.
+- [ ] Verificar la correcta instalación de MySQL(MariaDB) Apache, y PHP (LAMP Stack)
+
+- [ ] Establece la contraseña del root de MariaDB y configura la seguridad básica.
 
 
-### Paso 3: Configuración de Apache y PHP:
-- [ ] Instalar Apache y PHP
-```sh
-sudo apt-get install apache2 
-sudo apt-get install php libapache2-mod-php php-mysql
-```
-- [ ] Iniciar y habilitar el servicio de Apache
-```sh
-sudo systemctl start apache2 
-sudo systemctl enable apache2
-```
+### Paso 2: Instalación y Configuración de DVWA:
+- [ ] Descargar DVWA desde el enlace proporcionado
 
-### Paso 4: Instalación y Configuración de DVWA:
-- [ ] Descargar DVWA
 ```sh
 cd /var/www/html 
+sudo apt-get install wget unzip
+sudo wget https://storage.googleapis.com/breathecode/virtualbox/DVWA.zip sudo unzip DVWA.zip 
+sudo mv DVWA-master DVWA
 
 ```
 - [ ] Configurar DVWA
@@ -121,7 +90,7 @@ sudo chmod -R 755 /var/www/html/DVWA/
 - [ ] Revisa la configuración y Haz clic en "Create / Reset Database".
 
 
-### Paso 5: Realización del Ataque SQL Injection
+### Paso 3: Realización del Ataque SQL Injection
 - [ ] Abre un navegador en la VM y accede a http://localhost/DVWA.
 - [ ] Iniciar sesión en DVWA:
 ```
@@ -140,7 +109,12 @@ Ingresa un ataque de inyección SQL simple en el campo proporcionado de "User ID
 Haz clic en "Submit" y observa cómo DVWA procesa la inyección y muestra los resultados de la base de datos. 
 > 💡 NOTA: Deberías ver una lista de todos los usuarios extraída de la base de datos, indicando una inyección SQL exitosa.
 
-### Paso 6: Reporte del Incidente
+
+![vulnerability](assets/vulnerability.png)
+
+
+
+### Paso 4: Reporte del Incidente
 - [ ] Cumple la Estructura del Reporte
   * Título del Reporte
   * Introducción
@@ -150,4 +124,8 @@ Haz clic en "Submit" y observa cómo DVWA procesa la inyección y muestra los re
   * Recomendaciones
   * Conclusión
 
- ¡Buena suerte con tu ejercicio!
+
+> 💡 NOTA: Los informes de incidentes según la norma ISO 27001 no requieren específicamente la inclusión de imágenes, a menos que estas sean necesarias para ilustrar puntos críticos o detalles técnicos específicos del incidente. Sin embargo, en la mayoría de los casos, los informes suelen incluir capturas de pantalla, gráficos o diagramas solo si son relevantes para apoyar la explicación del incidente o para demostrar cómo se llevó a cabo la explotación de la vulnerabilidad.
+
+[Descargar un ejemplo de reporte de incidente](assets/incident_report_iso27001.pdf)
+
