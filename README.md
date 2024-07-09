@@ -1,15 +1,122 @@
-### Project Title: ISO 27001 Compliant Incident Management Report
+# ISO 27001 Compliant Incident Management Report
+<!-- hide -->
+
+> By [@rosinni](https://github.com/rosinni) and [other contributors](https://github.com/4GeeksAcademy/deploying-wordpress-debian/graphs/contributors) at [4Geeks Academy](https://4geeksacademy.co/)
+
+[![build by developers](https://img.shields.io/badge/build_by-Developers-blue)](https://4geeks.com)
+[![build by developers](https://img.shields.io/twitter/follow/4geeksacademy?style=social&logo=twitter)](https://twitter.com/4geeksacademy)
+
+*Estas instrucciones están [disponibles en español](https://github.com/breatheco-de/incident-report-management-exercise-project/blob/main/README.es.md)*
+<!-- endhide -->
+
+<!-- hide -->
+
+### Before Starting...
+
+> We need you! These exercises are created and maintained in collaboration with people like you. If you find any errors or typos, please contribute and/or report them.
+
+<!-- endhide -->
+
+## 🌱 How to start this project?
+
+Do not clone this repository! Just follow the instructions.
+
+This exercise aims to teach students how to identify and report an SQL injection vulnerability using the Damn Vulnerable Web Application (DVWA). The report should be made according to ISO 27001 standards for information security incident management.
+
+### Requirements
+
+- VirtualBox installed on your computer.
+- A Debian virtual machine installed in VirtualBox. (We will use the machine previously configured in earlier classes).
+
+#### Benefits of Using a Virtual Machine
+
+- **Isolation:** Keeps the testing environment separate from your main operating system, protecting it from potential damage.
+- **Ease of Restoration:** You can create snapshots of your virtual machine and easily restore them if something goes wrong.
+- **Portability:** You can easily move and share the virtual machine with others.
+
+## 📝 Instructions
+
+### Step 1: Verify the Virtual Machine Setup Before Starting
+
+- [ ] In the "Network" section, select "Bridge Adapter" so the VM is on the same network as your host.
+- [ ] Verify the correct installation of MySQL (MariaDB), Apache, and PHP (LAMP Stack).
+- [ ] Set the root password for MariaDB and configure the basic security.
+
+### Step 2: Installing and Configuring DVWA
+
+- [ ] Download DVWA from the provided link:
+    ```sh
+    cd /var/www/html
+    sudo apt-get install wget unzip
+    sudo wget https://storage.googleapis.com/breathecode/virtualbox/DVWA.zip
+    sudo unzip DVWA.zip
+    sudo mv DVWA-master DVWA
+    ```
+
+- [ ] Configure DVWA
+Change to the DVWA directory and rename the configuration file
+```sh
+cd DVWA/config 
+sudo cp config.inc.php.dist config.inc.php
+```
+- [ ] Edit the `config.inc.php` file to set the MariaDB credentials:
+```ssh
+sudo nano config.inc.php
+```
+> 💡 IMPORTANT: Ensure the following lines have the correct credentials:
+* $_DVWA[ 'db_user' ] = 'root';
+* $_DVWA[ 'db_password' ] = 'root_password'; 
+* $_DVWA[ 'db_database' ] = 'dvwa';
+
+- [ ] Configure the Database
+Log in to MariaDB and create the DVWA database
+```sh
+sudo mysql -u root -p 
+CREATE DATABASE dvwa; 
+EXIT;
+```
+- [ ] Adjust Permissions
+```sh
+sudo chown -R www-data:www-data /var/www/html/DVWA/
+sudo chmod -R 755 /var/www/html/DVWA/
+```
+- [ ] Open a browser in your VM and go to http://localhost/DVWA/setup.php
+- [ ] Review the setup and click "Create / Reset Database".
 
 
-- Incidente: Nosotros les vamos a pasar una vulnerabilidad a los alumnos de una maquina DVWA de OWASP de SQL Injection, ellos deben reportarla cumpliendo **flexiblemente** ISO 27001.
-- Que installen la maquin localmente
-- Que logren replicar una injeccion
-- Que lo reporten
-- Agregar un ejemplo de reporte para que ellos se guien.
+### Step 3: Conduct the SQL Injection Attack.
+- [ ] Open a browser in the VM and go to http://localhost/DVWA.
+- [ ] Log in to DVWA:
+```
+*Username: admin
+*Password: password
+```
+- [ ] Set the Security Level
+Go to the "DVWA Security" tab and select the "Low" security level to facilitate exploitation.
+
+- [ ] Execute the SQL Injection
+Go to the "SQL Injection" section in DVWA
+Enter a simple SQL injection attack in the provided "User ID" field, for example:
+```sh
+1' OR '1'='1
+```
+Click "Submit" and observe how DVWA processes the injection and displays the database results.
+> 💡 NOTE: You should see a list of all users extracted from the database, indicating a successful SQL injection.
+
+![vulnerability](assets/vulnerability.png)
 
 
+### Step 4: Incident Report.
 
-Recursos:
+- [ ] Follow the Report Structure
+  * Report Title
+  * Introduction
+  * Incident Description
+  * Reproduction Process
+  * Incident Impact
+  * Recommendations
+  * Conclusion
 
-- DVWA Running: http://124.71.1.37/DVWA/
-- Ejemplo de reporte de incidente (demsiado formal para neustro gusto): https://cybereaon.com/wp-content/uploads/2021/05/sample_report_web.pdf
+> 💡 NOTE: Incident reports according to ISO 27001 standards do not specifically require the inclusion of images unless they are necessary to illustrate critical points or specific technical details of the incident. However, in most cases, reports often include screenshots, charts, or diagrams only if they are relevant to support the explanation of the incident or to demonstrate how the vulnerability exploitation was carried out.
+
+[Download an example of an incident report](assets/incident_ISO27001_report.pdf)
