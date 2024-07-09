@@ -21,8 +21,6 @@
 
 ## 🌱 ¿Cómo empezar este proyecto?
 
-¡No clones este repositorio! solo sigue las intrucciones.
-
 Este ejercicio tiene como objetivo enseñar a los estudiantes cómo identificar y reportar una vulnerabilidad de inyección SQL utilizando la aplicación web Damn Vulnerable Web Application (DVWA). El reporte se debe realizar de acuerdo a las normas ISO 27001 para la gestión de incidentes de seguridad de la información.
 
 ### Requisitos
@@ -40,6 +38,15 @@ Este ejercicio tiene como objetivo enseñar a los estudiantes cómo identificar 
 - **Portabilidad:** Puedes mover y compartir la máquina virtual fácilmente con otros.
 
 ## 📝 Instrucciones
+
+* Abre esta URL y forkea el siguiente repositorio https://github.com/breatheco-de/incident-report-for-sql-injection-exercise-project
+
+ ![fork button](https://github.com/4GeeksAcademy/4GeeksAcademy/blob/master/site/src/static/fork_button.png?raw=true)
+
+Un nuevo repositorio se creará en tu cuenta.
+
+* Abre el nuevo repositorio forkeado utilizando una herramienta como Codespaces (recomendado) o Gitpod (pregúntele a su profesor cómo abrir su fork).
+* Una vez que hayas hecho esto, sigue el paso a paso.
 
 ### Paso 1: Verificar la configuración de la máquina virtual antes de iniciar:
 - [ ] En la sección "Red", selecciona "Adaptador Puente" (Bridge Adapter) para que la VM esté en la misma red que tu host.
@@ -128,4 +135,8 @@ Haz clic en "Submit" y observa cómo DVWA procesa la inyección y muestra los re
 > 💡 NOTA: Los informes de incidentes según la norma ISO 27001 no requieren específicamente la inclusión de imágenes, a menos que estas sean necesarias para ilustrar puntos críticos o detalles técnicos específicos del incidente. Sin embargo, en la mayoría de los casos, los informes suelen incluir capturas de pantalla, gráficos o diagramas solo si son relevantes para apoyar la explicación del incidente o para demostrar cómo se llevó a cabo la explotación de la vulnerabilidad.
 
 [Descargar un ejemplo de reporte de incidente](assets/incident_report_iso27001.pdf)
+
+## 📝 Delivery
+
+* En tu codespace en la raiz del proyecto forkeado, sube el  reporte en formato `.pdf` con el nombre `incident-report.pdf`
 
