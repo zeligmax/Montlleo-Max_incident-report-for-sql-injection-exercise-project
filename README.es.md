@@ -45,8 +45,8 @@ Este ejercicio tiene como objetivo enseñar a los estudiantes cómo identificar 
 
 Un nuevo repositorio se creará en tu cuenta.
 
-* Abre el nuevo repositorio forkeado utilizando una herramienta como Codespaces (recomendado) o Gitpod (pregúntele a su profesor cómo abrir su fork).
-* Una vez que hayas hecho esto, sigue el paso a paso.
+* Clona este nuevo repositorio forkeado utilizando Git para descargartelo a tu maquina local.
+* Una vez que hayas hecho esto, inicial learnpack (`$ learnpack start`), sigue el paso a paso.
 
 ### Paso 1: Verificar la configuración de la máquina virtual antes de iniciar:
 - [ ] En la sección "Red", selecciona "Adaptador Puente" (Bridge Adapter) para que la VM esté en la misma red que tu host.
