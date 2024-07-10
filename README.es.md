@@ -46,7 +46,7 @@ Este ejercicio tiene como objetivo enseñar a los estudiantes cómo identificar 
 Un nuevo repositorio se creará en tu cuenta.
 
 * Clona este nuevo repositorio forkeado utilizando Git para descargartelo a tu maquina local.
-* Una vez que hayas hecho esto, inicial learnpack (`$ learnpack start`), sigue el paso a paso.
+* Una vez que hayas clonado, sigue los pasos de mas abajo hasta el final.
 
 ### Paso 1: Verificar la configuración de la máquina virtual antes de iniciar:
 - [ ] En la sección "Red", selecciona "Adaptador Puente" (Bridge Adapter) para que la VM esté en la misma red que tu host.
