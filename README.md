@@ -19,8 +19,6 @@
 
 ## 🌱 How to start this project?
 
-Do not clone this repository! Just follow the instructions.
-
 This exercise aims to teach students how to identify and report an SQL injection vulnerability using the Damn Vulnerable Web Application (DVWA). The report should be made according to ISO 27001 standards for information security incident management.
 
 ### Requirements
@@ -35,6 +33,16 @@ This exercise aims to teach students how to identify and report an SQL injection
 - **Portability:** You can easily move and share the virtual machine with others.
 
 ## 📝 Instructions
+
+* Open this URL and fork the repository https://github.com/breatheco-de/incident-report-for-sql-injection-exercise-project
+
+ ![fork button](https://github.com/4GeeksAcademy/4GeeksAcademy/blob/master/site/src/static/fork_button.png?raw=true)
+
+A new repository will be created in your account.
+
+* Clone the newly created repository into your localhost computer.
+* Once you have cloned successfully, follow the steps below carefully, one by one.
+
 
 ### Step 1: Verify the Virtual Machine Setup Before Starting
 
@@ -120,3 +128,7 @@ Click "Submit" and observe how DVWA processes the injection and displays the dat
 > 💡 NOTE: Incident reports according to ISO 27001 standards do not specifically require the inclusion of images unless they are necessary to illustrate critical points or specific technical details of the incident. However, in most cases, reports often include screenshots, charts, or diagrams only if they are relevant to support the explanation of the incident or to demonstrate how the vulnerability exploitation was carried out.
 
 [Download an example of an incident report](assets/incident_ISO27001_report.pdf)
+
+## 📝 Delivery
+
+* In your Codespace at the root of the forked project, upload the report in `.pdf` format with the name `incident-report.pdf`
