@@ -40,8 +40,8 @@ This exercise aims to teach students how to identify and report an SQL injection
 
 A new repository will be created in your account.
 
-* Open the new forked repository using a provisioning tool like Codespaces (recommended) or Gitpod (ask your teacher on how to open your fork).
-* Once you have done this, follow the step by step.
+* Clone the newly created repository into your localhost computer.
+* Once you have cloned successfully, follow the steps below carefully, one by one.
 
 
 ### Step 1: Verify the Virtual Machine Setup Before Starting
