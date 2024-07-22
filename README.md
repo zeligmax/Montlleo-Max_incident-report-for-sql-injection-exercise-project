@@ -131,4 +131,4 @@ Click "Submit" and observe how DVWA processes the injection and displays the dat
 
 ## 📝 Delivery
 
-* In your Codespace at the root of the forked project, upload the report in `.pdf` format with the name `incident-report.pdf`
+* At the root of the forked project, upload the report in `.pdf` format with the name `incident-report.pdf`
