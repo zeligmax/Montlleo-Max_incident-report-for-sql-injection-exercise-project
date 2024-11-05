@@ -117,7 +117,7 @@ Haz clic en "Submit" y observa cómo DVWA procesa la inyección y muestra los re
 > 💡 NOTA: Deberías ver una lista de todos los usuarios extraída de la base de datos, indicando una inyección SQL exitosa.
 
 
-![vulnerability](assets/vulnerability.png)
+![vulnerability](https://github.com/breatheco-de/incident-report-for-sql-injection-exercise-project/blob/main/assets/vulnerability.png?raw=true)
 
 
 
@@ -134,7 +134,7 @@ Haz clic en "Submit" y observa cómo DVWA procesa la inyección y muestra los re
 
 > 💡 NOTA: Los informes de incidentes según la norma ISO 27001 no requieren específicamente la inclusión de imágenes, a menos que estas sean necesarias para ilustrar puntos críticos o detalles técnicos específicos del incidente. Sin embargo, en la mayoría de los casos, los informes suelen incluir capturas de pantalla, gráficos o diagramas solo si son relevantes para apoyar la explicación del incidente o para demostrar cómo se llevó a cabo la explotación de la vulnerabilidad.
 
-[Descargar un ejemplo de reporte de incidente](assets/incident_report_iso27001.pdf)
+[Descargar un ejemplo de reporte de incidente](https://github.com/breatheco-de/incident-report-for-sql-injection-exercise-project/blob/main/assets/incident_ISO27001_report.pdf?raw=true)
 
 ## 📝 Delivery
 
