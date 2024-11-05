@@ -111,7 +111,7 @@ Enter a simple SQL injection attack in the provided "User ID" field, for example
 Click "Submit" and observe how DVWA processes the injection and displays the database results.
 > 💡 NOTE: You should see a list of all users extracted from the database, indicating a successful SQL injection.
 
-![vulnerability](assets/vulnerability.png)
+![vulnerability](https://github.com/breatheco-de/incident-report-for-sql-injection-exercise-project/blob/main/assets/vulnerability.png?raw=true)
 
 
 ### Step 4: Incident Report.
@@ -127,7 +127,7 @@ Click "Submit" and observe how DVWA processes the injection and displays the dat
 
 > 💡 NOTE: Incident reports according to ISO 27001 standards do not specifically require the inclusion of images unless they are necessary to illustrate critical points or specific technical details of the incident. However, in most cases, reports often include screenshots, charts, or diagrams only if they are relevant to support the explanation of the incident or to demonstrate how the vulnerability exploitation was carried out.
 
-[Download an example of an incident report](assets/incident_ISO27001_report.pdf)
+[Download an example of an incident report](https://github.com/breatheco-de/incident-report-for-sql-injection-exercise-project/blob/main/assets/incident_ISO27001_report.pdf?raw=true)
 
 ## 📝 Delivery
 
