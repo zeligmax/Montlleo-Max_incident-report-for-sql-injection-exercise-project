@@ -13,7 +13,7 @@
 	"duration": 3,
 	"difficulty": "intermediate",
 	"bugsLink": "https://github.com/learnpack/learnpack/issues/new",
-	"technologies": ["linux", "cybersecurity", "ciberseguridad", "sql"],
+	"technologies": ["linux", "cybersecurity", "ciberseguridad", "sql", "sql-injection"],
 	"delivery":{
 		"instructions": {
 			"en": "Please upload your incident-report.pdf file to your GitHub repository and provide the link to your repository here",
